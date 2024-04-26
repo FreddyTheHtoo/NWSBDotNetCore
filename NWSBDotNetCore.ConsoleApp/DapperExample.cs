@@ -19,7 +19,7 @@ namespace NWSBDotNetCore.ConsoleApp
             //Edit(11);
             //Create("Titles", "Authors", "Contents");
             //Update(1003,"Titles 2", "Authors 3", "Contents 3");
-            Delete(3);
+            //Delete(3);
 
         }
 
