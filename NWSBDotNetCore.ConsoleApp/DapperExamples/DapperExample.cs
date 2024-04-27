@@ -1,4 +1,6 @@
 ﻿using Dapper;
+using NWSBDotNetCore.ConsoleApp.Connections;
+using NWSBDotNetCore.ConsoleApp.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,13 +10,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NWSBDotNetCore.ConsoleApp
+namespace NWSBDotNetCore.ConsoleApp.DapperExamples
 {
     internal class DapperExample
     {
         public void Run()
         {
-           /* Read()*/;
+            /* Read()*/
+            ;
             //Edit(1);
             //Edit(11);
             //Create("Titles", "Authors", "Contents");
@@ -26,12 +29,12 @@ namespace NWSBDotNetCore.ConsoleApp
         private void Read()
         {
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            
+
             List<BloDto> lst = db.Query<BloDto>("select * from Tbl_Blog").ToList();
 
             //ToList(); ka execute lote kine dr
-            
-            foreach (BloDto item in lst) 
+
+            foreach (BloDto item in lst)
             {
                 Console.WriteLine(item.BlogId);
                 Console.WriteLine(item.BlogTitle);
@@ -45,10 +48,10 @@ namespace NWSBDotNetCore.ConsoleApp
         private void Edit(int id)
         {
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            var item= db.Query<BloDto>("select * from Tbl_Blog where BlogId=@BlogId", new BloDto { BlogId = id}).FirstOrDefault();
+            var item = db.Query<BloDto>("select * from Tbl_Blog where BlogId=@BlogId", new BloDto { BlogId = id }).FirstOrDefault();
             //FirstOrDefaul(); ka default value ko null anay nk htar pay poh
             //if(item == null)
-            if(item is null)
+            if (item is null)
             {
                 Console.WriteLine("No data found.");
                 return;
@@ -66,7 +69,7 @@ namespace NWSBDotNetCore.ConsoleApp
                 BlogTitle = title,
                 BlogAuthor = author,
                 BlogContent = content,
-        };
+            };
 
 
             string query = @"INSERT INTO [dbo].[Tbl_Blog]
@@ -79,7 +82,7 @@ namespace NWSBDotNetCore.ConsoleApp
 
 
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            
+
             int result = db.Execute(query, item);
 
             string message = result > 0 ? "Saving Successful." : "Saving Failed.";
@@ -89,7 +92,7 @@ namespace NWSBDotNetCore.ConsoleApp
         {
             var item = new BloDto
             {
-                BlogId  = id,
+                BlogId = id,
                 BlogTitle = title,
                 BlogAuthor = author,
                 BlogContent = content,
@@ -110,13 +113,13 @@ namespace NWSBDotNetCore.ConsoleApp
             string message = result > 0 ? "Update Successful." : "Update Failed.";
             Console.WriteLine(message);
         }
-        
+
         private void Delete(int id)
         {
             var item = new BloDto
             {
                 BlogId = id,
-      
+
             };
 
 

@@ -4,8 +4,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NWSBDotNetCore.ConsoleApp.Dtos;
 
-namespace NWSBDotNetCore.ConsoleApp
+namespace NWSBDotNetCore.ConsoleApp.EFCoreExamples
 {
     internal class EFCoreExample
     {
@@ -88,13 +89,13 @@ namespace NWSBDotNetCore.ConsoleApp
                 return;
             }
 
-             db.Blogs.Remove(item);
+            db.Blogs.Remove(item);
             int result = db.SaveChanges();
 
             string message = result > 0 ? "Delete Successful." : "Delete Failed.";
             Console.WriteLine(message);
         }
 
-    
+
     }
 }

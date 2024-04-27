@@ -7,17 +7,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection.Metadata;
 
-namespace NWSBDotNetCore.ConsoleApp
+namespace NWSBDotNetCore.ConsoleApp.AdoDotNetExamples
 {
     internal class AdoDotNetExample
     {
-        private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder=new SqlConnectionStringBuilder()
+        private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
         {
             DataSource = "ASUS",
-        InitialCatalog = "DotNetTrainingBatch4",
+            InitialCatalog = "DotNetTrainingBatch4",
             UserID = "sa",
-           Password = "sa@123",
-           
+            Password = "sa@123",
+
         };
         public void Read()
         {
@@ -56,7 +56,7 @@ namespace NWSBDotNetCore.ConsoleApp
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             //SqlConnection connection = new SqlConnection("Data Source=ASUS;Initial Catalog=DotNetTrainingBatch4;User ID=sa;Password=sa@123;");
             connection.Open();
-            
+
 
             // take a space to show database data
             string query = " select * from Tbl_Blog where BlogId = @BlogId";
@@ -74,30 +74,30 @@ namespace NWSBDotNetCore.ConsoleApp
             if (dt.Rows.Count == 0)
             {
                 Console.WriteLine("No data found.");
-                return; 
+                return;
             }
 
-           DataRow dr = dt.Rows[0];
-            
-                Console.WriteLine("BlogId => " + dr["BlogId"]);
-                Console.WriteLine("BlogTitle => " + dr["BlogTitle"]);
-                Console.WriteLine("BlogAuthor => " + dr["BlogAuthor"]);
-                Console.WriteLine("BlogContent => " + dr["BlogContent"]);
-                Console.WriteLine("=====================================");
+            DataRow dr = dt.Rows[0];
 
-            
+            Console.WriteLine("BlogId => " + dr["BlogId"]);
+            Console.WriteLine("BlogTitle => " + dr["BlogTitle"]);
+            Console.WriteLine("BlogAuthor => " + dr["BlogAuthor"]);
+            Console.WriteLine("BlogContent => " + dr["BlogContent"]);
+            Console.WriteLine("=====================================");
+
+
 
         }
-            public void Create(string title, string author, string content)
-            {
+        public void Create(string title, string author, string content)
+        {
 
 
-                SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
-                //SqlConnection connection = new SqlConnection("Data Source=ASUS;Initial Catalog=DotNetTrainingBatch4;User ID=sa;Password=sa@123;");
-                connection.Open();
-                Console.WriteLine("connection open.");
+            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
+            //SqlConnection connection = new SqlConnection("Data Source=ASUS;Initial Catalog=DotNetTrainingBatch4;User ID=sa;Password=sa@123;");
+            connection.Open();
+            Console.WriteLine("connection open.");
 
-                string query = @"INSERT INTO [dbo].[Tbl_Blog]
+            string query = @"INSERT INTO [dbo].[Tbl_Blog]
            ([BlogTitle]
            ,[BlogAuthor]
            ,[BlogContent])
@@ -105,21 +105,21 @@ namespace NWSBDotNetCore.ConsoleApp
            (@BlogTitle
            ,@BlogAuthor
            ,@BlogContent)";
-                
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@BlogTitle", title);
-                cmd.Parameters.AddWithValue("@BlogAuthor", author);
-                cmd.Parameters.AddWithValue("@BlogContent", content);
 
-                int result = cmd.ExecuteNonQuery();
-               
-                connection.Close();
-                Console.WriteLine("connection close.");
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@BlogTitle", title);
+            cmd.Parameters.AddWithValue("@BlogAuthor", author);
+            cmd.Parameters.AddWithValue("@BlogContent", content);
 
-                string message = result > 0 ? "Saving Successful." : "Saving Failed";
-                Console.WriteLine(message);
-            }
-        public void    Update(int id, string title, string author, string content) 
+            int result = cmd.ExecuteNonQuery();
+
+            connection.Close();
+            Console.WriteLine("connection close.");
+
+            string message = result > 0 ? "Saving Successful." : "Saving Failed";
+            Console.WriteLine(message);
+        }
+        public void Update(int id, string title, string author, string content)
         {
 
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);

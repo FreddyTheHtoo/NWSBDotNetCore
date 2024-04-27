@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NWSBDotNetCore.ConsoleApp
+namespace NWSBDotNetCore.ConsoleApp.Connections
 {
     internal static class ConnectionStrings
     {
@@ -17,7 +17,7 @@ namespace NWSBDotNetCore.ConsoleApp
             Password = "sa@123",
             TrustServerCertificate = true,
 
-       
+
         };
     }
 }
