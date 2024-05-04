@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Localization;
 using NWSBDotNetCore.RestApi.Models;
+using NWSBDotNetCore.Shared;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
@@ -14,13 +15,17 @@ namespace NWSBDotNetCore.RestApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
    
-    public class BlogDapperController : ControllerBase
+    public class BlogDapper2Controller : ControllerBase
     {
-        private readonly IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-        private BLogModel?  FindById(int id)
+        private readonly DapperService _dapperService = new DapperService(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+      
+        //private readonly IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+
+        
+        private BLogModel? FindById(int id)
         {
-            string query = "select * from tbl_blog where BlogId=" + id;
-            var item = db.Query<BLogModel>(query, new BLogModel { BlogId = id }).FirstOrDefault();
+            string query = "select * from tbl_blog where BlogId="+id;
+            var item = _dapperService.QueryFirstOrDefault<BLogModel>(query, new BLogModel { BlogId = id });
             return item;
         } 
 
@@ -29,7 +34,7 @@ namespace NWSBDotNetCore.RestApi.Controllers
         {
             
             string query = "select * from Tbl_Blog";
-            List < BLogModel> lst = db.Query<BLogModel>(query).ToList();
+            var lst = _dapperService.Query<BLogModel>(query);
             return Ok(lst);
         }
 
@@ -37,11 +42,11 @@ namespace NWSBDotNetCore.RestApi.Controllers
         public IActionResult GetBlog(int id)
         {
 
-            string query = "select * from Tbl_Blog where blogid=@BlogId";
-            var item = db.Query<BLogModel>(query, new BLogModel { BlogId = id }).FirstOrDefault();
-            //FirstOrDefaul(); ka default value ko null anay nk htar pay poh
+            //string query = "select * from Tbl_Blog where blogid=@BlogId";
+            //var item = _dapperService.Query<BLogModel>(query, new BLogModel { BlogId = id }).FirstOrDefault();
+            ////FirstOrDefaul(); ka default value ko null anay nk htar pay poh
             //if(item == null)
-            //var item= FindById(id);
+            var item= FindById(id);
             if (item is null)
             {
                 return NotFound("No data found.");
@@ -57,7 +62,7 @@ namespace NWSBDotNetCore.RestApi.Controllers
             ([BlogTitle],[BlogAuthor],[BlogContent]) values 
             (@BlogTitle,@BlogAuthor,@BlogContent)";
 
-            int result = db.Execute(query, blog);
+            int result = _dapperService.Execute(query, blog);
             string message = result > 0 ? "Saving Successful." : "Saving Failed.";
             
             return Ok(message);
@@ -81,7 +86,7 @@ namespace NWSBDotNetCore.RestApi.Controllers
             ,[BlogContent]=@BlogContent
     WHERE BlogId=@BlogId";
 
-            int result = db.Execute(query, blog);
+            int result = _dapperService.Execute(query, blog);
             string message = result > 0 ? "Updating Successful." : "Updating Failed.";
 
             return Ok(message);
@@ -122,7 +127,7 @@ namespace NWSBDotNetCore.RestApi.Controllers
             
             string query = $@"UPDATE [dbo].[Tbl_Blog] SET {condition} WHERE BlogId=@BlogId";
 
-            int result = db.Execute(query, blog);
+            int result = _dapperService.Execute(query, blog);
             string message = result > 0 ? "Updating Successful." : "Updating Failed.";
 
             return Ok(message);
@@ -139,7 +144,7 @@ namespace NWSBDotNetCore.RestApi.Controllers
             }
 
             string query = @"DELETE FROM [dbo].[Tbl_Blog] WHERE BlogId=@BlogId";
-            int result = db.Execute(query, new BLogModel { BlogId=id});
+            int result = _dapperService.Execute(query, new BLogModel { BlogId=id});
             string message = result > 0 ? "Deleting Successful." : "Deleting Failed.";
 
             return Ok(message);
