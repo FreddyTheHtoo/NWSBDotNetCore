@@ -157,7 +157,7 @@ namespace NWSBDotNetCore.RestApi.Controllers
             int result = command.ExecuteNonQuery();
 
             connection.Close();
-            string msg = result > 0 ? "Udating Successful" : "Udating Failed.";
+            string msg = result > 0 ? "Updating Successful" : "Updating Failed.";
             return Ok(msg);
 
             
