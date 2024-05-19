@@ -4,11 +4,12 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json; 
 
-namespace NWSBDotNetCore.RestApiWithNlayer.Features.Dream
+namespace NWSBDotNetCore.RestApiWithNlayer.Features.DreamDictonary
+
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DreamController : ControllerBase
+    public class DreamDictionaryController : ControllerBase
     {
         private async Task<DreamDto> GetDataAsyn()
         {
@@ -17,22 +18,40 @@ namespace NWSBDotNetCore.RestApiWithNlayer.Features.Dream
             return model;
         }
 
-        [HttpGet("{BlogHeader}")]
+        [HttpGet("header")]
+
         public async Task<IActionResult> Header()
         {
-            var model= await GetDataAsyn();
+            var model = await GetDataAsyn();
             return Ok(model.BlogHeader);
         }
 
-        [HttpGet]
+        [HttpGet("detail")]
         public async Task<IActionResult> Detail()
         {
             var model = await GetDataAsyn();
             return Ok(model.BlogDetail);
         }
+
+
+        [HttpGet("ChooseYourAlphabet")]
+        public async Task<IActionResult> Ans(int Blogheader)
+        { 
+            var model = await GetDataAsyn();
+            var item = model.BlogHeader.FirstOrDefault(x => x.BlogId == Blogheader);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            var items = item.BlogId;
+            var lst = model.BlogDetail.Where(x => x.BlogId == items);
+            return Ok(lst);
+          
+        }
     }
 
-
+    
+  
     public class DreamDto
     {
         public Blogheader[] BlogHeader { get; set; }
