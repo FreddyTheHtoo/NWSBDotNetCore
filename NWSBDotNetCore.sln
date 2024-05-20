@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NWSBDotNetCore.RestApi", "N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NWSBDotNetCore.Shared", "NWSBDotNetCore.Minimal\NWSBDotNetCore.Shared.csproj", "{EA1752B8-A03D-45B1-9FB9-6CEA5B61454B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWSBDotNetCore.RestApiWithNlayer", "NWSBDotNetCore.RestApiWithNlayer\NWSBDotNetCore.RestApiWithNlayer.csproj", "{40132C7F-D2EF-459B-A3A2-1A7D74D0C5B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NWSBDotNetCore.RestApiWithNlayer", "NWSBDotNetCore.RestApiWithNlayer\NWSBDotNetCore.RestApiWithNlayer.csproj", "{40132C7F-D2EF-459B-A3A2-1A7D74D0C5B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWSBDotNetCore.HttpClient", "NWSBDotNetCore.HttpClient\NWSBDotNetCore.HttpClient.csproj", "{A263F2AA-47DF-4872-99DE-8EA5A1585577}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NWSBDotNetCore.HttpClient", "NWSBDotNetCore.HttpClient\NWSBDotNetCore.HttpClient.csproj", "{A263F2AA-47DF-4872-99DE-8EA5A1585577}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWSBDotNetCore.WindowFormApp", "NWSBDotNetCore.WindowFormApp\NWSBDotNetCore.WindowFormApp.csproj", "{1875A755-FA62-44B6-8228-D03C54701FF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{A263F2AA-47DF-4872-99DE-8EA5A1585577}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A263F2AA-47DF-4872-99DE-8EA5A1585577}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A263F2AA-47DF-4872-99DE-8EA5A1585577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1875A755-FA62-44B6-8228-D03C54701FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1875A755-FA62-44B6-8228-D03C54701FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1875A755-FA62-44B6-8228-D03C54701FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1875A755-FA62-44B6-8228-D03C54701FF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
