@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NWSBDotNetCore.HttpClient",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NWSBDotNetCore.WindowFormApp", "NWSBDotNetCore.WindowFormApp\NWSBDotNetCore.WindowFormApp.csproj", "{1875A755-FA62-44B6-8228-D03C54701FF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWSBDotNetCore.ConsoleAppHttpClientExample", "NWSBDotNetCore.ConsoleAppHttpClientExample\NWSBDotNetCore.ConsoleAppHttpClientExample.csproj", "{49B30B25-3E2F-444A-B966-3F73C1DCA619}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NWSBDotNetCore.ConsoleAppHttpClientExample", "NWSBDotNetCore.ConsoleAppHttpClientExample\NWSBDotNetCore.ConsoleAppHttpClientExample.csproj", "{49B30B25-3E2F-444A-B966-3F73C1DCA619}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWSBDotNetCore.ConsoleAppRestClientExample", "NWSBDotNetCore.ConsoleAppRestClientExample\NWSBDotNetCore.ConsoleAppRestClientExample.csproj", "{814D7EFE-40E2-4128-83F3-CC3AB04AFAE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{49B30B25-3E2F-444A-B966-3F73C1DCA619}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49B30B25-3E2F-444A-B966-3F73C1DCA619}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49B30B25-3E2F-444A-B966-3F73C1DCA619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{814D7EFE-40E2-4128-83F3-CC3AB04AFAE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{814D7EFE-40E2-4128-83F3-CC3AB04AFAE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{814D7EFE-40E2-4128-83F3-CC3AB04AFAE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{814D7EFE-40E2-4128-83F3-CC3AB04AFAE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
