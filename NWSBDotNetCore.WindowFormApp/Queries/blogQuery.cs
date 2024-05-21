@@ -8,7 +8,7 @@ namespace NWSBDotNetCore.WindowFormApp.Queries
 {
     internal class BlogQuery
     {
-        public static string BlogCreate = @"INSERT INTO [dbo].[Tbl_Blog]
+        public static string BlogCreate { get; } = @"INSERT INTO [dbo].[Tbl_Blog]
            ([BlogTitle]
            ,[BlogAuthor]
            ,[BlogContent])
