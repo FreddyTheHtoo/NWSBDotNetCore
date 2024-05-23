@@ -86,3 +86,31 @@ public class PizzaOrderDetailModel
     
     public int PizzaExtraId { get; internal set; }
 }
+
+public class PizzaOrderInvoiceHeadModel
+{
+    public int PizzaOrderId { get; set; }
+    public string PizzaOrderInvoiceNo { get; set; }
+    public int PizzaId { get; internal set; }
+    public decimal TottalAmount { get; internal set; }
+    public string Pizza { get; internal set; }
+    public decimal Price { get; internal set; }
+}
+
+public class PizzaOrderInvoiceDetailModel
+{
+    public int PizzaOrderDetailId { get; set; }
+    public string PizzaOrderInvoiceNo { get; set; }
+
+    public int PizzaExtraId { get; internal set; }
+    public string PizzaExtraName { get; internal set; }
+    public decimal Price { get;set; }
+}
+
+public class PizzaOrderInvoiceResponse
+{
+    public PizzaOrderInvoiceHeadModel Order { get; set; }
+
+    public List<PizzaOrderInvoiceDetailModel> OrderDetail { get; set;}
+
+}
