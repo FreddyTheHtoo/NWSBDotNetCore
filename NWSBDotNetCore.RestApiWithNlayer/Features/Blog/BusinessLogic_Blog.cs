@@ -1,5 +1,7 @@
 ﻿
-namespace NWSBDotNetCore.RestApiWithNlayer.Features.Blog
+using NWSBDotNetCore.RestApiWithNlayer.Models;
+
+namespace NWSBDotNetCore.RestApiWithlayer.Features.Blog
 {
     public class BusinessLogic_Blog
     {

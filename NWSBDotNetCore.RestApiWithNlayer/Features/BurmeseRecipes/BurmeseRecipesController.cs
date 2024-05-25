@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace NWSBDotNetCore.RestApiWithNlayer.Features.BurmeseRecipes
+namespace NWSBDotNetCore.RestApiWithlayer.Features.BurmeseRecipes
 {
     [Route("api/[controller]")]
     [ApiController]

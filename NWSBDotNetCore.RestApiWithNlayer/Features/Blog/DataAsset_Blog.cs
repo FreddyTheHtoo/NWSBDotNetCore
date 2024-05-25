@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
-using NWSBDotNetCore.RestApiWithNlayer.Db;
+using NWSBDotNetCore.RestApiWithlayer.Db;
+using NWSBDotNetCore.RestApiWithNlayer.Models;
 
-namespace NWSBDotNetCore.RestApiWithNlayer.Features.Blog
+namespace NWSBDotNetCore.RestApiWithlayer.Features.Blog
 {
     public class DataAsset_Blog
     {

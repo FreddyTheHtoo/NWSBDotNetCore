@@ -1,4 +1,4 @@
-﻿namespace NWSBDotNetCore.RestApiWithNlayer
+﻿namespace NWSBDotNetCore.RestApiWithlayer
 {
     internal static class ConnectionStrings
     {

@@ -4,7 +4,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json; 
 
-namespace NWSBDotNetCore.RestApiWithNlayer.Features.DreamDictonary
+namespace NWSBDotNetCore.RestApiWithlayer.Features.DreamDictonary
 
 {
     [Route("api/[controller]")]

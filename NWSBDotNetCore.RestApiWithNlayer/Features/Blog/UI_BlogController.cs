@@ -1,8 +1,9 @@
 ﻿
 
 using Microsoft.AspNetCore.Mvc;
+using NWSBDotNetCore.RestApiWithNlayer.Models;
 
-namespace NWSBDotNetCore.RestApiWithNlayer.Features.Blog
+namespace NWSBDotNetCore.RestApiWithlayer.Features.Blog
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -82,7 +83,7 @@ namespace NWSBDotNetCore.RestApiWithNlayer.Features.Blog
                 return NotFound("No data found.");
             }
             var result = _bl_blog.DeleteBlog(id);
-            string message = result > 0 ? "Updating Successful" : "Updating Failed";
+            string message = result > 0 ? "Deleting Successful" : "Deleting Failed";
             return Ok(message);
         }
     }

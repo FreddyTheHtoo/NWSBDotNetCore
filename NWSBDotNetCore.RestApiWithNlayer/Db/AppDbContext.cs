@@ -1,4 +1,6 @@
-﻿namespace NWSBDotNetCore.RestApiWithNlayer.Db;
+﻿using NWSBDotNetCore.RestApiWithNlayer.Models;
+
+namespace NWSBDotNetCore.RestApiWithlayer.Db;
 
 internal class AppDbContext : DbContext
 {
