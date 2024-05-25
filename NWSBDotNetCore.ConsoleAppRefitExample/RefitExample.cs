@@ -15,7 +15,7 @@ public class RefitExample
     public async Task RunAsync()
     {
         //await ReadAsync();
-        await EditAsync(10006);
+        //await EditAsync(10006);
         //await EditAsync(5);
         //await CreateAysnc("smuzar", "palatar", "eikyar");
         //await UpdateAysnc(6,"smuzarww", "palatarww", "eikyarww");
