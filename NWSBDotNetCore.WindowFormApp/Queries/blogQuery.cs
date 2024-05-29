@@ -23,5 +23,11 @@ namespace NWSBDotNetCore.WindowFormApp.Queries
       ,[BlogAuthor]
       ,[BlogContent]
   FROM [dbo].[Tbl_Blog]";
+        public static string BlogDelete { get; } = @"DELETE from [dbo].[tbl_blog] where BlogId = @BlogId";
+        public static string BlogUpdate { get; } = @"SELECT [BlogId]
+      ,[BlogTitle]
+      ,[BlogAuthor]
+      ,[BlogContent]
+  FROM [dbo].[Tbl_Blog] WHERE BlogId = @BlogId";
     }
 }
