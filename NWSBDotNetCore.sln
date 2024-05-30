@@ -36,6 +36,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWSBDotNetCore.WinFormsAppSqlInjection", "NWSBDotNetCore.WinFormsAppSqlInjection\NWSBDotNetCore.WinFormsAppSqlInjection.csproj", "{8B577FC9-3750-4A85-A774-23E78D419211}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWSBDotNetCore.Nlayer.UI", "NWSBDotNetCore.Nlayer.UI\NWSBDotNetCore.Nlayer.UI.csproj", "{32B615F9-5FB6-4599-93AB-BBE324DDE638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWSBDotNetCore.Nlayer.DataAccess", "NWSBDotNetCore.Nlayer.DataAccess\NWSBDotNetCore.Nlayer.DataAccess.csproj", "{1FD7E135-FEA5-47AE-A6DB-5A3CBAF48E22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWSBDotNetCore.Nlayer.BusinessLogic", "NWSBDotNetCore.Nlayer.BusinessLogic\NWSBDotNetCore.Nlayer.BusinessLogic.csproj", "{91E010CB-CBED-400C-9544-03911CAB1553}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +92,18 @@ Global
 		{8B577FC9-3750-4A85-A774-23E78D419211}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B577FC9-3750-4A85-A774-23E78D419211}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B577FC9-3750-4A85-A774-23E78D419211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32B615F9-5FB6-4599-93AB-BBE324DDE638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B615F9-5FB6-4599-93AB-BBE324DDE638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B615F9-5FB6-4599-93AB-BBE324DDE638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B615F9-5FB6-4599-93AB-BBE324DDE638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FD7E135-FEA5-47AE-A6DB-5A3CBAF48E22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FD7E135-FEA5-47AE-A6DB-5A3CBAF48E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FD7E135-FEA5-47AE-A6DB-5A3CBAF48E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FD7E135-FEA5-47AE-A6DB-5A3CBAF48E22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91E010CB-CBED-400C-9544-03911CAB1553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E010CB-CBED-400C-9544-03911CAB1553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E010CB-CBED-400C-9544-03911CAB1553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E010CB-CBED-400C-9544-03911CAB1553}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
