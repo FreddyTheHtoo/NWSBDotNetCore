@@ -27,7 +27,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NWSBDotNetCore.ConsoleAppRe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NWSBDotNetCore.PizzaApi", "NWSBDotNetCore.PizzaApi\NWSBDotNetCore.PizzaApi.csproj", "{27ADAC8F-9B21-438D-96FC-7298A6D0724D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWSBDotNetCore.ConsoleAppRefitExample", "NWSBDotNetCore.ConsoleAppRefitExample\NWSBDotNetCore.ConsoleAppRefitExample.csproj", "{C626086E-DAFA-4CBC-9EBF-3042F5EE5BD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NWSBDotNetCore.ConsoleAppRefitExample", "NWSBDotNetCore.ConsoleAppRefitExample\NWSBDotNetCore.ConsoleAppRefitExample.csproj", "{C626086E-DAFA-4CBC-9EBF-3042F5EE5BD0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{980F2C57-72FB-4F5E-AD31-CDA2F1F64B25}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWSBDotNetCore.WinFormsAppSqlInjection", "NWSBDotNetCore.WinFormsAppSqlInjection\NWSBDotNetCore.WinFormsAppSqlInjection.csproj", "{8B577FC9-3750-4A85-A774-23E78D419211}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +82,10 @@ Global
 		{C626086E-DAFA-4CBC-9EBF-3042F5EE5BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C626086E-DAFA-4CBC-9EBF-3042F5EE5BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C626086E-DAFA-4CBC-9EBF-3042F5EE5BD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B577FC9-3750-4A85-A774-23E78D419211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B577FC9-3750-4A85-A774-23E78D419211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B577FC9-3750-4A85-A774-23E78D419211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B577FC9-3750-4A85-A774-23E78D419211}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

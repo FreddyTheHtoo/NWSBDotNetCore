@@ -14,7 +14,7 @@ public class RefitExample
     //private readonly IBlogApi _service = RestService.For<IBlogApi>("http://localhost:5124");
     public async Task RunAsync()
     {
-        //await ReadAsync();
+        await ReadAsync();
         //await EditAsync(10006);
         //await EditAsync(5);
         //await CreateAysnc("smuzar", "palatar", "eikyar");
